@@ -25,8 +25,52 @@ systemctl start httpd
 
 just you ip in any browser
 You will see you page in browser
+otherwise enter the below command in git bash
+
+curl -s ipaddress
+You we get the response
 
 step 5
 For node two
 Follow the same step to node one
+
+For haproxy
+launch one more instance in google cloud and connect using with ssh
+Install haproxy
+
+yum install haproxy
+open haproxu.cfg file
+
+vim /etc/haproxy/haproxy.cfg
+
+add below code at last in the config file
+
+frontend  main *:80
+    default_backend             appname
+
+backend appname
+    balance     roundrobin
+    server  node1 ipaddres:80 check
+    server  node2 ipaddres:80 check
+
+Run below commands to start haproxy
+
+systemctl enable haproxy
+systemctl start haproxy
+
+Step 6
+open another git bash terminal run below commands
+Note: ipaddress means haproxy install system ip address
+
+curl haproxyipaddress
+curl -s haproxyipaddress
+
+if you want to hit ip address continuously
+
+while true ; do curl -s haproxyipaddress;sleep 0.5; done
+
+
+
+
+
 

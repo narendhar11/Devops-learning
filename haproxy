@@ -68,9 +68,3 @@ curl -s haproxyipaddress
 if you want to hit ip address continuously
 
 while true ; do curl -s haproxyipaddress;sleep 0.5; done
-
-
-
-
-
-

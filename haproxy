@@ -2,15 +2,15 @@ create nodes in google vm
 
 For node one
 
-Step 1
+# Step 1
 create node1 vm in google vm
 
-Step 2
+# Step 2
 open gitbash
 connect vm with ssh using below command
 ssh -i yourpravatekey username@ipaddress
 
-step 3
+# step 3
 go to root user and install httpd using below command
 
 yum install httpd
@@ -18,7 +18,7 @@ cd /var/www/html
 create index.html file
 vim index.html
 
-step 4
+# step 4
 enable and start httpd service
 systemctl enable httpd
 systemctl start httpd
@@ -58,7 +58,7 @@ Run below commands to start haproxy
 systemctl enable haproxy
 systemctl start haproxy
 
-Step 6
+# Step 6
 open another git bash terminal run below commands
 Note: ipaddress means haproxy install system ip address
 

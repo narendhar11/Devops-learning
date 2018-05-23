@@ -1,0 +1,32 @@
+create nodes in google vm
+
+For node one
+
+Step 1
+create node1 vm in google vm
+
+Step 2
+open gitbash
+connect vm with ssh using below command
+ssh -i yourpravatekey username@ipaddress
+
+step 3
+go to root user and install httpd using below command
+
+yum install httpd
+cd /var/www/html
+create index.html file
+vim index.html
+
+step 4
+enable and start httpd service
+systemctl enable httpd
+systemctl start httpd
+
+just you ip in any browser
+You will see you page in browser
+
+step 5
+For node two
+Follow the same step to node one
+

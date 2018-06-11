@@ -5,5 +5,5 @@ appnode2
 [dbnodes]
 dbserver
 
-[hanodes]
-ansiblehaproxy
+[proxynodes]
+proxy
